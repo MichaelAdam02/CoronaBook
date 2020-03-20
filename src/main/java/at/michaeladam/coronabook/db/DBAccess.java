@@ -1,4 +1,4 @@
-package at.michaeladam.coronabook.DB;
+package at.michaeladam.coronabook.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,8 +11,10 @@ import java.sql.SQLException;
  */
 public class DBAccess {
 
-    private Connection c;
-
+    private Connection c; 
+    
+    
+    
     public PreparedStatement prepareStatement(String sql) throws SQLException {
         return c.prepareStatement(sql);
     }

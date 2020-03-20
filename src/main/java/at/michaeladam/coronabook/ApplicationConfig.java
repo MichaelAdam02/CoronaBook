@@ -1,4 +1,4 @@
-package at.michaeladam.coronabook.api;
+package at.michaeladam.coronabook;
 
 import java.util.Set;
 import javax.ws.rs.core.Application;
@@ -7,7 +7,7 @@ import javax.ws.rs.core.Application;
  *
  * @author Michael ADAM
  */
-@javax.ws.rs.ApplicationPath("api")
+@javax.ws.rs.ApplicationPath("")
 public class ApplicationConfig extends Application {
 
     @Override

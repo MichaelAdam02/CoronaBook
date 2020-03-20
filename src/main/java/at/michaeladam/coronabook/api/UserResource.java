@@ -5,7 +5,7 @@
  */
 package at.michaeladam.coronabook.api;
 
-import at.michaeladam.coronabook.DB.DBAccess;
+import at.michaeladam.coronabook.db.DBAccess;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -24,7 +24,7 @@ import javax.ws.rs.core.MediaType;
  *
  * @author Michael ADAM
  */
-@Path("user")
+@Path("api/user")
 public class UserResource {
 
     @Context

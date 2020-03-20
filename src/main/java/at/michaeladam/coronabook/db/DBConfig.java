@@ -1,4 +1,4 @@
-package at.michaeladam.coronabook.DB;
+package at.michaeladam.coronabook.db;
 
 import java.util.Properties;
 
