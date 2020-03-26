@@ -23,7 +23,7 @@
             <% 
                 String error = (String) request.getSession().getAttribute("error");
                 if (error != null) {
-                    out.print("UIkit.notification({message: '" + error + "', status: 'success'})");
+                    out.print("UIkit.notification({message: '" + error + "', status: 'warning'})");
                 }
             %>
         </script>
@@ -35,8 +35,8 @@
 			<div class="uk-grid-margin uk-grid uk-grid-stack" uk-grid>
 				<div class="uk-width-1-1@m">
 					<div class="uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
-						<h3 class="uk-card-title uk-text-center">Welcome back!</h3>
-						<form action="loginManager.jsp" method="post">
+						<h3 class="uk-card-title uk-text-center">Welcome back to BookNews!</h3>
+						<form action="/CoronaBook/loginHandler" method="post">
 							<div class="uk-margin">
 								<div class="uk-inline uk-width-1-1">
 									<span class="uk-form-icon" uk-icon="icon: user"></span>
@@ -46,14 +46,14 @@
 							<div class="uk-margin">
 								<div class="uk-inline uk-width-1-1">
 									<span class="uk-form-icon" uk-icon="icon: lock"></span>
-									<input class="uk-input uk-form-large" type="password" name="password" >	
+									<input class="uk-input uk-form-large" type="password" name="password" placeholder="password">	
 								</div>
 							</div>
 							<div class="uk-margin">
 								<button class="uk-button uk-button-primary uk-button-large uk-width-1-1">Login</button>
 							</div>
 							<div class="uk-text-small uk-text-center">
-								Not registered? <a href="register.jsp">Create an account</a>
+								Not registered? <a href="/CoronaBook/login/register.jsp">Create an account</a>
 							</div>
 						</form>
 					</div>

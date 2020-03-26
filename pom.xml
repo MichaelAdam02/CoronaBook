@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>at.michaeladam</groupId>
-    <artifactId>CoronaBook</artifactId>
+    <artifactId>BookNews</artifactId>
     <version>0.1a</version>
     <packaging>war</packaging>
 
-    <name>CoronaBook</name>
+    <name>BookNews</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
