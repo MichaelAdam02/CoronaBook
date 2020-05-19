@@ -56,18 +56,18 @@ public class loginHandler extends HttpServlet {
                     response.sendRedirect("/CoronaBook/index.jsp");
                 } else {
                     request.getSession().setAttribute("error", "Wrong password");
-                    response.sendRedirect("/login/login.jsp");
+                    response.sendRedirect("/CoronaBook/login/login.jsp");
 
                 }
 
             } else {
                 request.getSession().setAttribute("error", "User not found");
-                response.sendRedirect("/login/login.jsp");
+                response.sendRedirect("/CoronaBook/login/login.jsp");
 
             }
         } catch (SQLException ex) {
                 request.getSession().setAttribute("error", ex.getMessage());
-                response.sendRedirect("login/login.jsp");
+                response.sendRedirect("/CoronaBook/login/login.jsp");
         }
 
     }
