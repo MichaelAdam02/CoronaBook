@@ -45,7 +45,8 @@
 
                     <select class="uk-select" name="previousPost"> 
                         <option>None</option>>
-                        <%                            DBAccess db = DBAccess.getInstance();
+                        <%                          
+                            DBAccess db = DBAccess.getInstance();
                             PreparedStatement posts = db.prepareStatement("SELECT title FROM cb.post WHERE uid = (SELECT uid FROM cb.user u WHERE u.name=?)");
                             posts.setString(1, user);
                             ResultSet rs = posts.executeQuery();

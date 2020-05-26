@@ -4,6 +4,8 @@
     Author     : Michael ADAM
 --%>
 
+<%@page import="at.michaeladam.coronabook.GlobalConfig"%>
+<%@page import="at.michaeladam.coronabook.GlobalConfig.default_dtf_formatter"%> 
 <%@page import="java.sql.SQLException"%>
 <%@page import="java.time.format.DateTimeFormatter"%>
 <%@page import="java.time.LocalDateTime"%>
@@ -39,9 +41,8 @@
     String autor = userResult.getString(1);
     
     
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d. MMM u");
     
-    String date = rs.getDate("date").toLocalDate().format(formatter);
+    String date = rs.getDate("date").toLocalDate().format(GlobalConfig.default_dtf_formatter);
     
     
     
@@ -50,7 +51,7 @@
     String intro = rs.getString("intro");
     String content = rs.getString("content");
     
-    String title = rs.getString("title");
+    String title = rs.getString("title"); 
     
     
     
@@ -138,11 +139,7 @@
                           <h7>Autor, <%=autor%> </h7>
                           </br>
                           <h7><%=intro%></h7>
-                          </br>
-                          
-                          
-                          
-                          
+                          </br> 
                           <%=content%>
                           
                           
@@ -158,8 +155,7 @@
 			  <h3>Related Posts</h3>
 			  <div class="fakeimg">Liste</div><br>
 			  <div class="fakeimg">Previous</div><br>
-			  <div class="fakeimg">Next</div> 
-			  <h3>Follow Me</h3> 
+			  <div class="fakeimg">Next</div>  
 			</div>
 		 </div>
 	  </div>
